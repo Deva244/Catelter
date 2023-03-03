@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "/api/cats/";
+const API_URL = "/cats/";
 
 const getCats = async () => {
   const response = await axios.get(API_URL);

@@ -15,10 +15,10 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.use("/api/cats", require("./routes/catRoutes"));
-app.use("/api/users", require("./routes/userRoutes"));
-app.use("/api/img", require("./routes/uploadRoutes"));
-app.use("/api/contact", require("./routes/contactRoutes"));
+app.use("/cats", require("./routes/catRoutes"));
+app.use("/users", require("./routes/userRoutes"));
+app.use("/img", require("./routes/uploadRoutes"));
+app.use("/contact", require("./routes/contactRoutes"));
 
 app.use(errorHandler);
 

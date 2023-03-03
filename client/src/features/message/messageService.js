@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "/api/contact/message/";
+const API_URL = "/contact/message/";
 
 const sendMsg = async (message) => {
   const response = await axios.post(API_URL, message);
