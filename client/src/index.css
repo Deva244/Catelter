@@ -1,0 +1,116 @@
+html,
+body,
+#root,
+.admin,
+.admin-page {
+  height: 100%;
+  width: 100%;
+}
+
+.admin {
+  display: flex;
+  position: relative;
+}
+
+body {
+  margin: 0;
+  padding: 0 !important;
+  font-family: "Roboto", sans-serif;
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #e0e0e0;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.error {
+  text-align: center;
+  margin-top: 200px;
+}
+
+.above-bar {
+  background-color: black;
+  padding: 5px;
+  display: flex;
+}
+
+.social-btn {
+  width: 35px;
+  padding: 5px;
+}
+
+.logo-img {
+  width: 3.5rem;
+  padding: 15px 5px 15px 15px;
+}
+
+.footer {
+  color: white;
+  /* text-align: center; */
+  padding: 30px;
+  background-color: #090c12;
+}
+
+.pet-img {
+  width: 100%;
+  cursor: pointer;
+}
+
+.login-page {
+  padding: 5% 0 30% 0;
+  background-image: url("https://www.humanesociety.org/sites/default/files/styles/1240x698/public/2020-07/kitten-510651.jpg?h=f54c7448&itok=ZhplzyJ9");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: black;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-container > h2 {
+  font-weight: 700;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form > input {
+  padding: 5px;
+  margin: 10px;
+  width: 300px;
+}
+
+.login-btn {
+  background-color: white;
+  padding: 5px;
+  border: 1px solid rgb(88, 104, 246);
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.login-btn:hover {
+  background-color: rgb(165, 92, 238);
+  border: 1px solid rgb(165, 92, 238);
+  cursor: pointer;
+}
