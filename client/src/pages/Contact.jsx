@@ -1,15 +1,19 @@
-import { Box, Typography, useMediaQuery } from "@mui/material";
+import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
+import { tokens } from "../theme";
 import MessageForm from "../components/MessageForm";
 import HomeIcon from "@mui/icons-material/Home";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
 
 export default function Contact() {
-  const Desktop = useMediaQuery("(min-width:1000px)");
-  const Tablet = useMediaQuery("(min-width: 600px)");
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
+
+  const Desktop = useMediaQuery("(min-width:1024px)");
+  const Tablet = useMediaQuery("(min-width: 700px)");
 
   return (
-    <Box m={Desktop ? "10vh 10rem" : "10vh 0.7rem"} height="100%">
+    <Box m={Desktop ? "10vh 10rem" : "10vh 0.7rem 15rem 0.7rem"} height="100%">
       <Typography variant="h1">Contact</Typography>
       <Box
         display="flex"
@@ -17,10 +21,7 @@ export default function Contact() {
         flexDirection={Desktop || Tablet ? "row" : "column"}
         m="2rem 0"
       >
-        <img
-          src="contact.jpg"
-          width={Desktop ? "500px" : Tablet ? "500px" : "100%"}
-        />
+        <img src="contact.jpg" width={Desktop ? "500px" : "100%"} />
         <Box
           m={
             Desktop
@@ -50,7 +51,7 @@ export default function Contact() {
           </Typography>
         </Box>
       </Box>
-      <Box bgcolor="#1f2a40" p="1.3rem 0.5rem">
+      <Box bgcolor={colors.primary[400]} p="1.3rem 0.5rem" mb="1rem">
         <MessageForm />
       </Box>
     </Box>

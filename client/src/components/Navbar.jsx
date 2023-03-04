@@ -207,7 +207,7 @@ export default function Navbar() {
                 <Tab label="Contact" onClick={() => navigate("/contact")} />
                 <Tab
                   label="Adoption Form"
-                  onClick={() => navigate("/form")}
+                  onClick={() => navigate("/form/choose/no")}
                   sx={{ borderTop: "1px solid grey" }}
                 />
               </Tabs>
