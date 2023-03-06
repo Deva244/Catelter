@@ -50,7 +50,7 @@ export default function StatBox({
             color: colors.grey[900],
             cursor: "pointer",
           }}
-          onClick={() => navigate(`/admin/${destination}`)}
+          onClick={() => navigate(`/cadmin/${destination}`)}
         >
           {icon}
           {title}
