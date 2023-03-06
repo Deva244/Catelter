@@ -105,6 +105,9 @@ export default function AdoptionForm() {
             display="flex"
             justifyContent="center"
             alignItems="center"
+            onClick={handleOpen}
+            width="100%"
+            height="100%"
             m="0 auto"
             sx={{
               "& .MuiBadge-badge": {
@@ -135,7 +138,13 @@ export default function AdoptionForm() {
       minWidth: 80,
       renderCell: ({ row: { name, viewed } }) => {
         return (
-          <Box>
+          <Box
+            display="flex"
+            alignItems="center"
+            onClick={handleOpen}
+            width="100%"
+            height="100%"
+          >
             {!viewed ? (
               <Typography sx={{ fontWeight: "bold" }}>{name}</Typography>
             ) : (
@@ -152,7 +161,13 @@ export default function AdoptionForm() {
       minWidth: 80,
       renderCell: ({ row: { email, viewed } }) => {
         return (
-          <Box>
+          <Box
+            display="flex"
+            alignItems="center"
+            onClick={handleOpen}
+            width="100%"
+            height="100%"
+          >
             {!viewed ? (
               <Typography sx={{ fontWeight: "bold" }}>{email}</Typography>
             ) : (
@@ -169,7 +184,13 @@ export default function AdoptionForm() {
       minWidth: 80,
       renderCell: ({ row: { phone, viewed } }) => {
         return (
-          <Box>
+          <Box
+            display="flex"
+            alignItems="center"
+            onClick={handleOpen}
+            width="100%"
+            height="100%"
+          >
             {!viewed ? (
               <Typography sx={{ fontWeight: "bold" }}>{phone}</Typography>
             ) : (
@@ -343,7 +364,7 @@ export default function AdoptionForm() {
           <Typography
             variant="h4"
             sx={{ textAlign: "center" }}
-          >{`Delete message from "${selectedForm.name}"?`}</Typography>
+          >{`Delete form submitted by "${selectedForm.name}"?`}</Typography>
           <Box
             display="flex"
             alignItems="center"
@@ -432,7 +453,6 @@ export default function AdoptionForm() {
                 setSelectedRow(ids[0]);
               }
             }
-            handleOpen();
           }}
         />
       </Box>

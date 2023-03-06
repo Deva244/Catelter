@@ -35,7 +35,7 @@ export default function Messages() {
 
   const isNonMobile = useMediaQuery("(min-width:750px)");
 
-  const { data, unreadCount } = useSelector((store) => store.message);
+  const { data } = useSelector((store) => store.message);
 
   const [messages, setMessages] = useState([]);
 
@@ -106,10 +106,13 @@ export default function Messages() {
             justifyContent="center"
             alignItems="center"
             m="0 auto"
+            onClick={handleOpen}
             sx={{
               "& .MuiBadge-badge": {
                 p: "6px",
                 borderRadius: "50%",
+                width: "100%",
+                height: "100%",
               },
             }}
           >
@@ -136,7 +139,12 @@ export default function Messages() {
       minWidth: 80,
       renderCell: ({ row: { name, read } }) => {
         return (
-          <Box>
+          <Box
+            display="flex"
+            alignItems="center"
+            onClick={handleOpen}
+            sx={{ width: "100%", height: "100%" }}
+          >
             {!read ? (
               <Typography sx={{ fontWeight: "bold" }}>{name}</Typography>
             ) : (
@@ -153,7 +161,17 @@ export default function Messages() {
       minWidth: 80,
       renderCell: ({ row: { message, read } }) => {
         return (
-          <Box sx={{ overflow: "hidden", whiteSpace: "nowrap" }}>
+          <Box
+            display="flex"
+            alignItems="center"
+            onClick={handleOpen}
+            width="100%"
+            height="100%"
+            sx={{
+              overflow: "hidden",
+              whiteSpace: "nowrap",
+            }}
+          >
             {!read ? (
               <Typography
                 sx={{
@@ -411,7 +429,6 @@ export default function Messages() {
                 setSelectedRow(ids[0]);
               }
             }
-            handleOpen();
           }}
         />
       </Box>

@@ -99,7 +99,7 @@ export default function AdoptionForm() {
     }),
   });
 
-  function handleFormSubmit(values) {
+  function handleFormSubmit(values, { resetForm }) {
     const children = values.children ? "Yes" : "No";
     const petOwner = values.petOwner ? "Yes" : "No";
 
@@ -117,6 +117,7 @@ export default function AdoptionForm() {
     };
 
     dispatch(submitForm(data));
+    resetForm({ values: "" });
   }
 
   return (

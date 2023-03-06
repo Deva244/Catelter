@@ -25,7 +25,7 @@ export default function MessageForm() {
 
   useEffect(() => {
     if (isSuccess) {
-      toast.success("message");
+      toast.success(message);
     }
     if (isError) {
       toast.error(message);
@@ -45,7 +45,7 @@ export default function MessageForm() {
     message: yup.string().required("*required"),
   });
 
-  function handleFormSubmit(values) {
+  function handleFormSubmit(values, { resetForm }) {
     const data = {
       name: values.name,
       email: values.email,
@@ -53,7 +53,7 @@ export default function MessageForm() {
     };
 
     dispatch(sendMessage(data));
-    setMessageData("");
+    resetForm({ values: "" });
   }
 
   return (
