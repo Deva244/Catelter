@@ -125,9 +125,9 @@ export default function AdoptionForm() {
       flexDirection="column"
       alignItems="center"
       height="100%"
-      mt="7rem"
+      m={isNonMobile ? "6rem 0 0 0" : "5rem"}
     >
-      <Typography variant="h2" sx={{ mb: 1 }}>
+      <Typography variant="h2" sx={{ mb: 1, textAlign: "center" }}>
         Adoption Form
       </Typography>
       <Formik
@@ -360,6 +360,7 @@ export default function AdoptionForm() {
                 sx={{
                   display: "flex",
                   justifyContent: "left",
+                  m: "1rem 0",
                   bgcolor: colors.blueAccent[500],
                   ":hover": {
                     bgcolor: colors.blueAccent[600],

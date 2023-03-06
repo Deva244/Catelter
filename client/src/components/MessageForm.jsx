@@ -21,7 +21,7 @@ export default function MessageForm() {
 
   const { message, isSuccess, isError } = useSelector((store) => store.message);
 
-  const Desktop = useMediaQuery("(min-width:1024px)");
+  const isNonMobile = useMediaQuery("(min-width:700px)");
 
   useEffect(() => {
     if (isSuccess) {
@@ -57,7 +57,7 @@ export default function MessageForm() {
   }
 
   return (
-    <Box>
+    <Box mb="1rem" height="100%">
       <Typography variant="h2" sx={{ mb: 1 }}>
         Contact Us
       </Typography>
@@ -79,7 +79,7 @@ export default function MessageForm() {
               display="flex"
               alignItems="center"
               flexDirection="column"
-              width={Desktop ? "25rem" : "90vw"}
+              width={isNonMobile ? "25rem" : "90vw"}
             >
               <TextField
                 fullWidth
