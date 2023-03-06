@@ -92,7 +92,7 @@ export default function Account() {
     formData.append("type", "update details");
 
     await dispatch(updateUser(formData));
-    navigate("/admin");
+    navigate("/cadmin");
     dispatch(getUserData());
     dispatch(getAllUsers());
   }

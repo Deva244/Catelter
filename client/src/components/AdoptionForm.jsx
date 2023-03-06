@@ -344,12 +344,17 @@ export default function AdoptionForm() {
                   }}
                 >
                   {catsData.map((cat) => {
-                    return (
-                      <MenuItem value={cat.name} key={cat._id}>
-                        <Avatar alt={cat.name} src={cat.imageUrl} />
-                        <Typography sx={{ ml: 2 }}>{cat.name}</Typography>
-                      </MenuItem>
-                    );
+                    if (
+                      cat.state === "Available" ||
+                      cat.state === "Unavailable"
+                    ) {
+                      return (
+                        <MenuItem value={cat.name} key={cat._id}>
+                          <Avatar alt={cat.name} src={cat.imageUrl} />
+                          <Typography sx={{ ml: 2 }}>{cat.name}</Typography>
+                        </MenuItem>
+                      );
+                    }
                   })}
                 </TextField>
               )}
