@@ -1,7 +1,7 @@
 # Catelter
 https://catelter.onrender.com/
 
-MERN Stack App | Mock cat shelter website with a fully functional admin dashboard.
+MERN Stack App | Fully Functional Mock cat shelter website with an admin dashboard.
 
 Admin Dashboard has complete CRUD functionality.
 
